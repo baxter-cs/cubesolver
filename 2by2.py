@@ -1,3 +1,12 @@
+# Colors
+white = 'white'
+green = 'green'
+orange = 'orange'
+red = 'red'
+blue = 'blue'
+yellow = 'yellow'
+
+
 class Cube:
 
     def __init__(self):
