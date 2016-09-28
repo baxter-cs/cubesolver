@@ -29,5 +29,24 @@ class Cube:
                 output += '{} '.format(cell)
         return output
 
+    def turn_u(self):
+        # Change Top
+        self.faces['u'][0][1], self.faces['u'][1][1], self.faces['u'][0][0], self.faces['u'][1][0] = self.faces['u'][0][0], self.faces['u'][0][1], self.faces['u'][1][0], self.faces['u'][1][1]
+        # Changing other sides
+        self.faces['l'][0][0], self.faces['l'][0][1], self.faces['b'][0][0], self.faces['b'][0][1], self.faces['f'][0][0], self.faces['f'][0][1], self.faces['r'][0][0], self.faces['r'][0][1] = self.faces['f'][0][0], self.faces['f'][0][1], self.faces['l'][0][0], self.faces['l'][0][1], self.faces['r'][0][0], self.faces['r'][0][1], self.faces['b'][0][0], self.faces['b'][0][1]
+
 cube = Cube()
 print(cube.face_to_str('u'))
+print(cube.face_to_str('d'))
+print(cube.face_to_str('l'))
+print(cube.face_to_str('r'))
+print(cube.face_to_str('f'))
+print(cube.face_to_str('b'))
+cube.turn_u()
+print("Turned")
+print(cube.face_to_str('u'))
+print(cube.face_to_str('d'))
+print(cube.face_to_str('l'))
+print(cube.face_to_str('r'))
+print(cube.face_to_str('f'))
+print(cube.face_to_str('b'))
