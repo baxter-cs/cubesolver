@@ -1,0 +1,6 @@
+Turn top face clockwise U
+Turn down face clockwise D
+Turn left face clockwise L
+Turn right face clockwise R
+Turn front face clockwise F
+Turn back face clockwise B
