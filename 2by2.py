@@ -11,10 +11,10 @@ class Cube:
 
     def __init__(self):
         faces = {
-            'u': [[None, None], [None, None]],
-            'd': [[None, None], [None, None]],
-            'l': [[None, None], [None, None]],
-            'r': [[None, None], [None, None]],
-            'f': [[None, None], [None, None]],
-            'b': [[None, None], [None, None]]
+            'u': [[orange, orange], [orange, orange]],
+            'd': [[red, red], [red, red]],
+            'l': [[green, green], [green, green]],
+            'r': [[blue, blue], [blue, blue]],
+            'f': [[white, white], [white, white]],
+            'b': [[yellow, yellow], [yellow, yellow]]
         }
