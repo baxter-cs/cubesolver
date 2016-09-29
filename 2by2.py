@@ -39,9 +39,11 @@ class Cube:
 
     def turn_u(self):
         # Change Top
-        self.faces['u'][0][1], self.faces['u'][1][1], self.faces['u'][0][0], self.faces['u'][1][0] = self.faces['u'][0][0], self.faces['u'][0][1], self.faces['u'][1][0], self.faces['u'][1][1]
+        self.faces['u'][0][1], self.faces['u'][1][1], self.faces['u'][0][0], self.faces['u'][1][0] = \
+            self.faces['u'][0][0], self.faces['u'][0][1], self.faces['u'][1][0], self.faces['u'][1][1]
         # Changing other sides
-        self.faces['l'][0][0], self.faces['l'][0][1], self.faces['b'][0][0], self.faces['b'][0][1], self.faces['f'][0][0], self.faces['f'][0][1], self.faces['r'][0][0], self.faces['r'][0][1] = self.faces['f'][0][0], self.faces['f'][0][1], self.faces['l'][0][0], self.faces['l'][0][1], self.faces['r'][0][0], self.faces['r'][0][1], self.faces['b'][0][0], self.faces['b'][0][1]
+        self.faces['l'][0], self.faces['b'][0], self.faces['f'][0], self.faces['r'][0] = \
+            self.faces['f'][0], self.faces['l'][0], self.faces['r'][0], self.faces['b'][0]
 
 
 class TestSuite:
