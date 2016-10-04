@@ -42,6 +42,7 @@ class Cube:
         self.faces['u'][0][1], self.faces['u'][1][1], self.faces['u'][0][0], self.faces['u'][1][0] = \
             self.faces['u'][0][0], self.faces['u'][0][1], self.faces['u'][1][0], self.faces['u'][1][1]
         # Changing other sides
+<<<<<<< .merge_file_a19180
 <<<<<<< HEAD
         self.faces['l'][0][0], self.faces['l'][0][1], self.faces['b'][0][0], self.faces['b'][0][1], self.faces['f'][0][0], self.faces['f'][0][1], self.faces['r'][0][0], self.faces['r'][0][1] = self.faces['f'][0][0], self.faces['f'][0][1], self.faces['l'][0][0], self.faces['l'][0][1], self.faces['r'][0][0], self.faces['r'][0][1], self.faces['b'][0][0], self.faces['b'][0][1]
     
@@ -85,6 +86,35 @@ print(cube.face_to_str('b'))
 =======
         self.faces['l'][0], self.faces['b'][0], self.faces['f'][0], self.faces['r'][0] = \
             self.faces['f'][0], self.faces['l'][0], self.faces['r'][0], self.faces['b'][0]
+=======
+        self.faces['l'][0], self.faces['b'][0], self.faces['f'][0], self.faces['r'][0] = \
+            self.faces['f'][0], self.faces['l'][0], self.faces['r'][0], self.faces['b'][0]
+
+    def turn_l(self):
+        # Change Left
+        self.faces['l'][0][1], self.faces['l'][1][1], self.faces['l'][0][0], self.faces['l'][1][0] = \
+            self.faces['l'][0][0], self.faces['l'][0][1], self.faces['l'][1][0], self.faces['l'][1][1]
+        self.faces['d'][1][0], self.faces['d'][0][0] = self.faces['f'][1][0], self.faces['f'][0][0]
+        self.faces['f'][1][0], self.faces['f'][0][0] = self.faces['u'][1][0], self.faces['u'][0][0]
+        self.faces['u'][1][0], self.faces['u'][0][0] = self.faces['b'][1][0], self.faces['b'][0][0]
+        self.faces['b'][1][0], self.faces['b'][0][0] = self.faces['d'][1][0], self.faces['d'][0][0]
+
+    def turn_r(self):
+        self.faces['r'][0][1], self.faces['r'][1][1], self.faces['r'][0][0], self.faces['r'][1][0] = \
+            self.faces['r'][0][0], self.faces['r'][0][1], self.faces['r'][1][0], self.faces['r'][1][1]
+        self.faces['f'][0][1], self.faces['f'][1][1] = self.faces['d'][0][1], self.faces['d'][1][1]
+        self.faces['d'][0][1], self.faces['d'][1][1] = self.faces['b'][0][1], self.faces['b'][1][1]
+        self.faces['b'][0][1], self.faces['b'][1][1] = self.faces['u'][0][1], self.faces['u'][1][1]
+        self.faces['u'][0][1], self.faces['u'][1][1] = self.faces['f'][0][1], self.faces['f'][1][1]
+
+    def turn_d(self):
+        self.faces['d'][0][1], self.faces['d'][1][1], self.faces['d'][0][0], self.faces['d'][1][0] = \
+            self.faces['d'][0][0], self.faces['d'][0][1], self.faces['d'][1][0], self.faces['d'][1][1]
+        self.faces['f'][1][0], self.faces['f'][1][1] = self.faces['l'][1][0], self.faces['l'][1][1]
+        self.faces['l'][1][0], self.faces['l'][1][1] = self.faces['b'][1][0], self.faces['b'][1][1]
+        self.faces['b'][1][0], self.faces['b'][1][1] = self.faces['r'][1][0], self.faces['r'][1][1]
+        self.faces['r'][1][0], self.faces['r'][1][1] = self.faces['f'][1][0], self.faces['f'][1][1]
+>>>>>>> .merge_file_a17012
 
 
 class TestSuite:
@@ -108,4 +138,7 @@ class TestSuite:
 
 test = TestSuite()
 test.run_all_tests()
+<<<<<<< .merge_file_a19180
 >>>>>>> master
+=======
+>>>>>>> .merge_file_a17012
